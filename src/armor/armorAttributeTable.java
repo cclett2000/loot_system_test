@@ -56,7 +56,7 @@ public class armorAttributeTable {
         att_name.add("Seared");
         att_name.add("Frozen");
         att_name.add("Grounded");
-        att_name.add("Poison Resist");
+        att_name.add("Antidote");
 
         attribute = att_name.get(index);
 
