@@ -106,15 +106,17 @@ public class armorAttributeTable {
         att_values.add(75);     // poison res
 
         if (quality > 1) {
-            int div_max = att_values.get(index) / (quality - 1);
-            int div_min = att_values.get(index) / quality;
-            value = div_min + rng.nextInt(div_max - div_min);
+            int div_max = att_values.get(index) / (quality - 1);        // set max value based on quality
+            int div_min = att_values.get(index) / quality;              // set min value based on quality
+            value = div_min + rng.nextInt(div_max - div_min);    // get value within range of min and max value
+
             System.out.println("Index: " + index + " || Attribute: " + getAttributeEffect(index) +  " || Min Value: " + div_min + " || Max Value: " + div_max +  " || Value: " + value);
         }
 
         else{
-            int div_max = att_values.get(index) / quality;
+            int div_max = att_values.get(index) / quality;  // set max value to the maximum since item is at highest quality
             value = rng.nextInt(div_max);
+
             System.out.println("Index: " + index + " || Attribute: " + getAttributeEffect(index) + " || Max Value: " + div_max + " || Value: " + value);
         }
 
